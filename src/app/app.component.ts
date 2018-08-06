@@ -11,6 +11,12 @@ export class AppComponent {
 
   public second1 = false;
 
+  secondpaeclick(){
+    third= true;
+    first = false;
+    second = false;
+  }
+
   /*constructor(private data:DataService) { }
   * app:any;
   * second:any;
