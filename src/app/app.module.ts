@@ -22,8 +22,8 @@ import { DataService } from './data.service';
     HttpModule,
     RouterModule.forRoot([
       //{path: '', redirectTo: 'first', pathMatch: 'full'},
-      {path: 'first', component: FirstComponent},
-      {path: 'second', component: SecondComponent}
+      //{path: 'first', component: FirstComponent},
+      //{path: 'second', component: SecondComponent}
     ])
   ],
   providers: [DataService],
