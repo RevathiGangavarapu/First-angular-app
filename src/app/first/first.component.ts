@@ -11,7 +11,7 @@ export class FirstComponent {
   public third = false;
   public first = false;
 
-  public display = " "
+  public display = "agdyacvuydbefudy"
 
   secondpageclickenter(){
     this.third = true;
