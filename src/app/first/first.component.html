@@ -1,5 +1,10 @@
-<div *ngIf= "second">
-            Get value into First Component Text Box: <input type="text" name= "firstComponentTextBox"  value = {{appVariable}}>  <br><br>
-            <!--<button value="click1" (click)= "secondpageclick()" >click1</button>-->
+
+
+<div *ngIf= "second" style=" color:blue" >
+    Textbox1: <input type="text" name= "app1" (Keyup.enter) = "secondpageclickenter()" value = {{app}} 
+    [(ngModel)] = "app">  <br><br>
+    <!--<button value="click1" (click)= "secondpageclick()" >click1</button>-->
 </div>
-<li>AppVariable value: {{appVariable}}</li>
+<div>
+    {{showvalueofparent}}
+</div>

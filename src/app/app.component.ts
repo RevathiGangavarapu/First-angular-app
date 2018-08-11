@@ -8,11 +8,12 @@ import { DataService } from './data.service';
 })
 export class AppComponent {
 //variable declaration
+  display =" value ";
+  
   public second = false;
   public third = false;
   public first = true;
   
-
   //method declaration
   firstpageclickenter(){
     this.second = true;
