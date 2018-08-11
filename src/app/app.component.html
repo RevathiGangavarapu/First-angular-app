@@ -1,45 +1,8 @@
-
-  
-  <body>
-    <div class="navbar navbar-expand-lg ">
-      <div class="container">
-        <a href="../" class="navbar-brand">APP</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="first">First</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="second">Second</a>
-              </li>  
-          </ul>
-        
-        </div>
+<div><router-outlet></router-outlet></div>
+      <div *ngIf= "first">
+          Value in App Component HTML: <br> <br>
+         <input type="text" name="appComponentTextBox" [(ngModel)] = "appVariable">
+         <button value="click"  >
+           <a routerLink= "/first" >Go to First Component</a>
+          </button>
       </div>
-    </div>
-<div class= "container">
-<router-outlet></router-outlet>
-</div>
-
-<div class= " container ">
-{{title}}
-</div>
-
-<div *ngIf= "first">
-    Textbox: <input type="text" name="app" value = {{app}} [(ngModel)] = "app"> <br><br>
-    <button value="click" (click)= "firstpageclick()" >  click</button>   
-</div>
-
-<div *ngIf= "second">
-    Textbox1: <input type="text" name= "app1" value= {{app}} [(ngModel)] = "app" >  <br><br>
-    <button value="click1" (click)= "secondpageclick()" >  click1</button>
-</div>
-
-<div *ngIf= "third">
-    Textbox2: <input type="text" name="app2" value = {{app}} [(ngModel)] = "app"> <br><br>
-    <button value="click2" (click)= "thirdpageclick()"> click2 </button>
-</div>
- 

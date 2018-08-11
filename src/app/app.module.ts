@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import {RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import {appRoutes} from './routerConfig';
 
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
@@ -20,11 +21,7 @@ import { DataService } from './data.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      //{path: '', redirectTo: 'first', pathMatch: 'full'},
-      //{path: 'first', component: FirstComponent},
-      //{path: 'second', component: SecondComponent}
-    ])
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

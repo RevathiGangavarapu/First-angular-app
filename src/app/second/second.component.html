@@ -1,12 +1,9 @@
-<p>
-  second works!
-</p>
 
-<div>
-    <!--Textbox: <input type="text" name="second"> <br><br>
-    <button value="click" [(ngModel)]="click">click</button>
-    <h2>{{first}}</h2> -->
-   
-    <app-first> </app-first>
+  
+<div *ngIf= "third" style="color:greenyellow">
+      Textbox2: <input type="text" name= "app1" (Keyup.enter) = "thirdpageclickenter()" value = {{app}} 
+         [(ngModel)] = "app" >  <br><br>
+      <!--<button value="click1" (click)= "secondpageclick()" >click1</button>-->
 </div>
 
+ 

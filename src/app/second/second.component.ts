@@ -6,21 +6,22 @@ import { DataService } from '../data.service';
   templateUrl: './second.component.html',
   styleUrls: ['./second.component.css']
 })
-export class SecondComponent implements OnInit, OnDestroy {
+export class SecondComponent {
+  public second = false;
+  public third = true;
+  public first = false;
 
-  constructor(private data:DataService) { }
-  click:any;
-  first:any;
-  second:any;
-  
-  ngOnInit() {
-    this.first = this.data.first;
-    //this.click = this.data.click;
+  thirdpageclickenter(){
+    this.first = true;
+    this.third = false;
+    this.second = false;
   }
-  
-  ngOnDestroy(){
-    //this.data.second = this.second;
-    this.data.click = this.click;
-  }
-
+/*constructor (private data:DataService){}
+ngOnInit(){
+  this.first = this.data.first;
+}
+ngOnDestroy(){
+  this.data.third = this.third;
+}*/
+ 
 }
