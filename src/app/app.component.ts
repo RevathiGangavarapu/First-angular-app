@@ -8,7 +8,7 @@ import { DataService } from './data.service';
 })
 export class AppComponent {
 //variable declaration
-  display =" value ";
+ /* display =" value ";
   
   public second = false;
   public third = false;
@@ -19,13 +19,6 @@ export class AppComponent {
     this.second = true;
     this.third = false;
     this.first = false;
-  }    
-/*constructor (private data:DataService){}
-ngOnInit(){
-  this.second = this.data.second;
-}
-ngOnDestroy(){
-  this.data.first = this.first;
-}*/
+  }*/
 }
 

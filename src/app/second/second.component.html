@@ -1,9 +1,14 @@
+<div class="crop"
+     [style.width.px]="starwidth"
+     [title]="rating"
+     (click)="onclick()">
+  <div style="width:75px">
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
 
-  
-<div *ngIf= "third" style="color:greenyellow">
-      Textbox2: <input type="text" name= "app1" (Keyup.enter) = "thirdpageclickenter()" value = {{app}} 
-         [(ngModel)] = "app" >  <br><br>
-      <!--<button value="click1" (click)= "secondpageclick()" >click1</button>-->
+  </div>
+
 </div>
 
  
