@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, OnChanges, Input } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
@@ -6,22 +6,12 @@ import { DataService } from '../data.service';
   templateUrl: './second.component.html',
   styleUrls: ['./second.component.css']
 })
-export class SecondComponent {
-  public second = false;
-  public third = true;
-  public first = false;
+export class SecondComponent implements OnChanges {
+ @Input() rating: number;
+ starwidth: number;
 
-  thirdpageclickenter(){
-    this.first = true;
-    this.third = false;
-    this.second = false;
-  }
-/*constructor (private data:DataService){}
-ngOnInit(){
-  this.first = this.data.first;
-}
-ngOnDestroy(){
-  this.data.third = this.third;
-}*/
+ ngOnChanges():void{
+   this.starwidth = this.rating * 75 / 5;
+ }
  
 }

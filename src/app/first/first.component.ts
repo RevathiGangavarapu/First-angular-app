@@ -7,7 +7,7 @@ import { DataService } from '../data.service';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent {
-  public second = true;
+  /*public second = true;
   public third = false;
   public first = false;
 
@@ -18,6 +18,29 @@ export class FirstComponent {
     this.first = false;
     this.second = false;
   }
-  @Input() showvalueofparent:any;
- 
+  @Input() showvalueofparent:any;*/
+
+  pagetitle: string = "BIBA Designer Costumes";
+  showImage: boolean = false;
+  Products: any[] = [
+    {
+    "ProductID": 1,
+    "ProductName": "saree",
+    "ProductCode": "JDK-3245",
+    "ProductPrice": 20,
+    "Rating": 4.2,
+    "imageUrl":"https://www.sareeo.clothing/attractive-multicolor-designer-satin-silk-saree-67611.html" 
+    },
+
+    {
+      "ProductID": 2,
+      "ProductName": "Dressmaterial",
+      "ProductCode": "KSE-5454",
+      "ProductPrice": 15,
+      "Rating": 3
+    }
+  ];
+      toggleImage(): void{
+        this.showImage = !this.showImage;
+      }
 }
