@@ -7,20 +7,9 @@ import { DataService } from '../data.service';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent {
-  /*public second = true;
-  public third = false;
-  public first = false;
 
-  public display = "agdyacvuydbefudy"
-
-  secondpageclickenter(){
-    this.third = true;
-    this.first = false;
-    this.second = false;
-  }
-  @Input() showvalueofparent:any;*/
-
-  pagetitle: string = "BIBA Designer Costumes";
+  title: string = "BIBA Designer Costumes";
+  pagetitle: string = "ProductList";
   showImage: boolean = false;
   Products: any[] = [
     {
@@ -42,5 +31,9 @@ export class FirstComponent {
   ];
       toggleImage(): void{
         this.showImage = !this.showImage;
+      }
+
+      onclicked(message: string): void{
+        this.pagetitle = 'ProductList: ' + message;
       }
 }

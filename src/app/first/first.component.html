@@ -1,18 +1,7 @@
-
-
-<!--<div *ngIf= "second" style=" color:blue" >
-    Textbox1: <input type="text" name= "app1" (Keyup.enter) = "secondpageclickenter()" value = {{app}} 
-    [(ngModel)] = "app">  <br><br>-->
-    <!--<button value="click1" (click)= "secondpageclick()" >click1</button>-->
-<!--</div>
 <div>
-    {{showvalueofparent}}
-</div>-->
-
-<div>
-    <h1 style="color:blue">{{pagetitle}}</h1>
+    <h1 style="color:blue">{{title}}</h1>
     <div >
-       <h3> Product List</h3><br><br><hr>
+       <h6> {{pagetitle}}</h6><br><br><hr>
         <div>
         Filter by:<input type="text"> <hr>
         </div>
@@ -36,7 +25,8 @@
                     <td>{{product.ProductName}}</td>
                     <td>{{product.ProductCode}}</td>
                     <td>{{product.ProductPrice | currency: 'USD': 'symbol'}}</td>
-                    <td><app-second [rating]='product.Rating'></app-second></td>
+                    <td><app-second [rating]='product.Rating'
+                           (ratingclicked)='onclicked ($event)'></app-second></td>
                     <td>
                         <img *ngIf= 'showImage'
                              [src]='product.imageUrl'
