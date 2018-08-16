@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, OnChanges, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnChanges, EventEmitter, Input, Output } from '@angular/core';
 import { DataService } from '../data.service';
 //import { EventEmitter } from '../../../node_modules/protractor';
 
@@ -17,6 +17,6 @@ export class SecondComponent implements OnChanges {
  }
  
  onclick(): void{
-   this.ratingclicked.emit ('The rating ${this.Rating} was clicked!')
+   this.ratingclicked.emit ('The rating ${this.rating} was clicked!')
  }
 }

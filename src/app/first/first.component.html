@@ -1,5 +1,5 @@
 <div>
-    <h1 style="color:blue">{{title}}</h1>
+    <h2 style="color:blue">{{title}}</h2>
     <div >
        <h6> {{pagetitle}}</h6><br><br><hr>
         <div>
@@ -30,7 +30,9 @@
                     <td>
                         <img *ngIf= 'showImage'
                              [src]='product.imageUrl'
-                             [title]='product.ProductName'>
+                             [title]='product.ProductName'
+                             [style.width.px]= 'imagewidth'
+                             [style.margin.px] = 'imagemargin'>
                     </td>
                 </tr>
             </tbody>
